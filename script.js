@@ -1,4 +1,4 @@
-// Smooth Scroll on Button Click
+// Smooth Scroll for Learn More Button
 document.querySelector('.scroll-down').addEventListener('click', () => {
   document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
@@ -20,16 +20,9 @@ gsap.from("header .welcome p", {
   ease: "power2.out",
 });
 
-gsap.from(".scroll-down", {
-  opacity: 0,
-  duration: 1,
-  delay: 1.5,
-  ease: "power2.out",
-});
-
-// Section Fade-in on Scroll
 gsap.registerPlugin(ScrollTrigger);
 
+// Animate Sections on Scroll
 gsap.to("#about, #skills, #certificates", {
   opacity: 1,
   duration: 1,
@@ -39,32 +32,22 @@ gsap.to("#about, #skills, #certificates", {
   },
 });
 
-// Skills Progress Bars Animation
-gsap.fromTo(
-  ".progress-bar .fill",
-  { width: "0%" },
-  {
-    width: "100%",
-    duration: 1.5,
-    delay: 0.3,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: "#skills",
-      start: "top 80%",
-    },
-  }
-);
-
 // Certificate Chart
 const ctx = document.getElementById('certificateChart').getContext('2d');
 new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['Python Basics', 'Java Mastery', 'Web Development', 'Data Science'],
+    labels: [
+      'Google Data Analyst (2/8)',
+      'Python Basics Certification',
+      'SQL Mastery',
+      'Java Programming',
+      'Data Visualization'
+    ],
     datasets: [{
-      label: 'Progress (%)',
-      data: [80, 70, 60, 90], // Update this data as needed
-      backgroundColor: ['#4facfe', '#00f2fe', '#ffb400', '#4caf50'],
+      label: 'Completion (%)',
+      data: [25, 90, 75, 80, 60], // Progress Values
+      backgroundColor: ['#4facfe', '#00f2fe', '#ffb400', '#4caf50', '#ffa07a'],
     }]
   },
   options: {
