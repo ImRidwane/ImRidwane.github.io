@@ -30,7 +30,7 @@ h1 span {
   50% { transform: translateY(-10px); }
 }
 
-#about, #skills {
+#about, #skills, #certificates {
   padding: 50px 20px;
   opacity: 0; /* Initially hidden for animation */
 }
@@ -53,4 +53,8 @@ h2 {
   background: #4facfe;
   height: 100%;
   display: block;
+}
+
+#certificates {
+  text-align: center;
 }
