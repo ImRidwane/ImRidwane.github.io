@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ridwane's Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js"></script>
 </head>
 <body>
   <header id="home">
@@ -17,7 +18,12 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m Ridwane, a passionate learner and aspiring software engineer...</p>
+    <p>
+      I’m Ridwane, a passionate learner and aspiring software engineer. 
+      Currently, I am pursuing a Bachelor's degree in Computer Science at XYZ University. 
+      My areas of interest include Python development, web technologies, and machine learning. 
+      I enjoy solving problems, learning new technologies, and building projects that make an impact.
+    </p>
   </section>
 
   <section id="skills">
@@ -34,6 +40,17 @@
         <span class="fill" style="width: 80%;"></span>
       </div>
     </div>
+    <div class="skill">
+      <h3>JavaScript</h3>
+      <div class="progress-bar">
+        <span class="fill" style="width: 70%;"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <canvas id="certificateChart" width="400" height="200"></canvas>
   </section>
 
   <footer>
@@ -42,6 +59,7 @@
   
   <!-- GSAP Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
