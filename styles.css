@@ -53,6 +53,7 @@ h2 {
   background: #4facfe;
   height: 100%;
   display: block;
+  transition: width 1s ease-out;
 }
 
 #certificates {
