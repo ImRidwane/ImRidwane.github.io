@@ -99,9 +99,9 @@ I’m **Ridwane**, an aspiring software engineer passionate about building innov
 
 ### 📧 **Contact Me**
 
-- **Email**: [your-email@example.com](mailto:your-email@example.com)  
-- **LinkedIn**: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)  
-- **GitHub**: [github.com/your-username](https://github.com/your-username)  
+- **Email**: [ridwane670@gmail.com](mailto:ridwane670@gmail.com)  
+- **LinkedIn**: ([https://linkedin.com/in/your-profile](https://www.linkedin.com/in/ridwane-abdoulbaki-7bb63b28a/))  
+- **GitHub**: [github.com/ImRidwane](https://github.com/ImRidwane)  
 
 Feel free to reach out for collaboration, questions, or opportunities! 😊
 
