@@ -30,7 +30,7 @@ gsap.from(".scroll-down", {
 // Section Fade-in on Scroll
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to("#about, #skills", {
+gsap.to("#about, #skills, #certificates", {
   opacity: 1,
   duration: 1,
   scrollTrigger: {
@@ -54,3 +54,26 @@ gsap.fromTo(
     },
   }
 );
+
+// Certificate Chart
+const ctx = document.getElementById('certificateChart').getContext('2d');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Python Basics', 'Java Mastery', 'Web Development', 'Data Science'],
+    datasets: [{
+      label: 'Progress (%)',
+      data: [80, 70, 60, 90], // Update this data as needed
+      backgroundColor: ['#4facfe', '#00f2fe', '#ffb400', '#4caf50'],
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    }
+  }
+});
