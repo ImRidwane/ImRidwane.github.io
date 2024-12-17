@@ -20,33 +20,11 @@ gsap.from("header .welcome p", {
   ease: "power2.out",
 });
 
-// Certificates Chart
-const ctx = document.getElementById('certificateChart').getContext('2d');
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: [
-      'Google Data Analyst (2/8)',
-      'Python Basics Certification',
-      'SQL Mastery',
-      'Java Programming',
-      'Data Visualization'
-    ],
-    datasets: [{
-      label: 'Completion (%)',
-      data: [25, 90, 75, 80, 60], // Update with actual progress
-      backgroundColor: ['#4facfe', '#00f2fe', '#ffb400', '#4caf50', '#ffa07a'],
-    }]
-  },
-  options: {
-    responsive: true,
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 100
-      }
-    }
-  }
+gsap.from(".scroll-down", {
+  opacity: 0,
+  duration: 1,
+  delay: 1.5,
+  ease: "power2.out",
 });
 
 // Section Fade-in on Scroll
@@ -59,4 +37,43 @@ gsap.to("#about, #skills, #certificates", {
     trigger: "#about",
     start: "top 75%",
   },
+});
+
+// Skills Progress Bars Animation
+gsap.fromTo(
+  ".progress-bar .fill",
+  { width: "0%" },
+  {
+    width: "100%",
+    duration: 1.5,
+    delay: 0.3,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#skills",
+      start: "top 80%",
+    },
+  }
+);
+
+// Certificate Chart
+const ctx = document.getElementById('certificateChart').getContext('2d');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Python Basics', 'Java Mastery', 'Web Development', 'Data Science'],
+    datasets: [{
+      label: 'Progress (%)',
+      data: [80, 70, 60, 90], // Update this data as needed
+      backgroundColor: ['#4facfe', '#00f2fe', '#ffb400', '#4caf50'],
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    }
+  }
 });
