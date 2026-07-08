@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>21 — Blackjack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="table">
+
+    <!-- HUD strip, dashboard-style readout -->
+    <header class="hud">
+      <div class="hud-block">
+        <span class="hud-label">Bankroll</span>
+        <span class="hud-value" id="bankroll">$1,000</span>
+      </div>
+      <div class="hud-block hud-center">
+        <span class="badge">21</span>
+      </div>
+      <div class="hud-block hud-right">
+        <span class="hud-label">Wager</span>
+        <span class="hud-value" id="wager-display">$50</span>
+      </div>
+    </header>
+
+    <!-- Dealer zone -->
+    <section class="zone dealer-zone">
+      <div class="zone-label">
+        <span>Dealer</span>
+        <span class="count" id="dealer-count">—</span>
+      </div>
+      <div class="hand" id="dealer-hand"></div>
+    </section>
+
+    <!-- Center message rail -->
+    <div class="rail" id="message-rail">
+      <span id="message-text">Place your bet to begin</span>
+    </div>
+
+    <!-- Player zone -->
+    <section class="zone player-zone">
+      <div class="zone-label">
+        <span>You</span>
+        <span class="count" id="player-count">—</span>
+      </div>
+      <div class="hand" id="player-hand"></div>
+    </section>
+
+    <!-- Chip rail -->
+    <div class="chip-rail" id="chip-rail">
+      <button class="chip" data-value="10">$10</button>
+      <button class="chip" data-value="25">$25</button>
+      <button class="chip" data-value="50">$50</button>
+      <button class="chip" data-value="100">$100</button>
+      <button class="chip chip-clear" id="chip-clear">Clear</button>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls" id="controls">
+      <button class="btn btn-primary" id="btn-deal">Deal</button>
+      <button class="btn" id="btn-hit" disabled>Hit</button>
+      <button class="btn" id="btn-stand" disabled>Stand</button>
+      <button class="btn" id="btn-double" disabled>Double</button>
+    </div>
+
+    <footer class="footer">
+      <span>Ridwane's Garage — Blackjack Table</span>
+    </footer>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
